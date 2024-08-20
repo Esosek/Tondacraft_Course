@@ -10,8 +10,10 @@ extends CharacterBody3D
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
+# Spouští se při spuštění hry
 func _init():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	print(speed)
 
 func _physics_process(delta):
 	# Add the gravity.
