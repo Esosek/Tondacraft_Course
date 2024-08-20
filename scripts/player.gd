@@ -4,16 +4,20 @@ extends CharacterBody3D
 @export var jump_velocity = 4.5
 @export var mouse_sensitivity = 0.002
 @export var camera_clamp = 1.2
+@export var health = 1
+@export var max_health = 5
 
 @onready var camera = $Camera3D
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
-# Spouští se při spuštění hry
+# Volá se při spuštění hry
 func _init():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	print(speed)
+	print("Health ", health)
+	health = max_health
+	print("Health ", health)
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -38,7 +42,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _unhandled_input(event):
-	# Mouse look
+	# Pohled myší
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * mouse_sensitivity)
 		camera.rotate_x(-event.relative.y * mouse_sensitivity)
