@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://tr3ghg0jhlfp"]
+
+[ext_resource type="PackedScene" uid="uid://b4oyjs4pdd7ey" path="res://levels/trees/Tree.fbx" id="1_4dagk"]
+
+[node name="Tree" instance=ExtResource("1_4dagk")]
