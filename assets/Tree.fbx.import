@@ -35,7 +35,7 @@ _subresources={
 "materials": {
 "TreeMat": {
 "use_external/enabled": true,
-"use_external/path": "res://levels/trees/tree_material.tres"
+"use_external/path": "res://scenes/tree/tree_material.tres"
 }
 }
 }
