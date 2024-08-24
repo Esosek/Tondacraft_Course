@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bllu8hmid8bj0"]
+
+[ext_resource type="Texture2D" uid="uid://cplx2fgm0nar6" path="res://scenes/player/health/empty_heart.png" id="1_14rsx"]
+
+[node name="Heart" type="TextureRect"]
+offset_right = 60.0
+offset_bottom = 60.0
+texture = ExtResource("1_14rsx")
+expand_mode = 2
+stretch_mode = 4

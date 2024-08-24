@@ -1,0 +1,17 @@
+Úkol 1
+1. Namaluj si v piskel ikonu šípu 16x16
+2. Stáhni si ho jako .png obrázek, nazvi ho arrow_icon.png a nahraj do složky /scenes/arrow/counter
+3. Ve scéně UI vytvoř nový node typu "Control" a nazvi ho ArrowControl
+4. Nastav mu šířku 230px a výšku 60px a nastav ho do pravého horního rohu obrazovky
+5. Jako child přidej node "TextureRect"
+6. Přidej mu jako texturu tvůj namalovaný obrázek a velikost nodu nastav na 60x60
+7. Přidej další node "Label" jako child "ArrowCounter" nodu
+8. Vyplň pole text jakýmkoliv číslem
+9. Zkus nastavit vytvořené nody tak, aby se nejprve zobrazovalo číslo a vpravo ikona šípu
+
+Úkol 2
+1. Vytvoř skript pro node "ArrowCounter" s názvem "arrow_counter.gd"
+2. Vytvoř proměnnou arrows, která se dá nastavovat přes editor
+3. Přidej do skriptu referenci na Label node
+4. Připrav built-in funkci, která se zavolá při spuštění hry a bude měnit node tree
+5. V této funkci nastav atribut .text odkazovaného "Label" nodu na hodnotu `str(arrows)`. Příště si povíme proč nefunguje pouze arrows.

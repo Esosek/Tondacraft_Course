@@ -1,4 +1,7 @@
+class_name Player
 extends CharacterBody3D
+
+signal health_updated
 
 @export var speed = 5.0
 @export var jump_velocity = 4.5
@@ -16,9 +19,10 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 func _init():
 	# Zneviditelní myš a zamkne jí na střed obrazovky
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	print("Health ", health)
-	health = max_health
-	print("Health ", health)
+
+# Volá se při načtení nodu do hry
+func _ready():
+	set_initial_health()
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -48,3 +52,7 @@ func _unhandled_input(event):
 		rotate_y(-event.relative.x * mouse_sensitivity)
 		camera.rotate_x(-event.relative.y * mouse_sensitivity)
 		camera.rotation.x = clamp(camera.rotation.x, -camera_clamp, camera_clamp)
+		
+func set_initial_health():
+	health = max_health
+	health_updated.emit(health)

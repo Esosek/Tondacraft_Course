@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cylbs1f7p2ut1"]
+[gd_scene load_steps=7 format=3 uid="uid://cylbs1f7p2ut1"]
 
 [ext_resource type="PackedScene" uid="uid://duc1fbwkdku8e" path="res://scenes/player/player.tscn" id="1_0mkui"]
-[ext_resource type="PackedScene" uid="uid://b4oyjs4pdd7ey" path="res://assets/Tree.fbx" id="2_m3ei8"]
+[ext_resource type="PackedScene" uid="uid://coc6e0ohhhk4u" path="res://scenes/ui.tscn" id="1_04odf"]
+[ext_resource type="PackedScene" uid="uid://tr3ghg0jhlfp" path="res://scenes/tree/tree.tscn" id="3_bm0ac"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_65kno"]
 albedo_color = Color(0.203141, 0.590745, 0.362937, 1)
@@ -11,6 +12,8 @@ albedo_color = Color(0.203141, 0.590745, 0.362937, 1)
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_q6v2w"]
 
 [node name="Game" type="Node"]
+
+[node name="UI" parent="." instance=ExtResource("1_04odf")]
 
 [node name="Ground" type="StaticBody3D" parent="."]
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
@@ -31,11 +34,13 @@ shadow_enabled = true
 
 [node name="Trees" type="Node3D" parent="."]
 
-[node name="Tree" parent="Trees" instance=ExtResource("2_m3ei8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.674944, 0, -7.62635)
+[node name="Tree" parent="Trees" instance=ExtResource("3_bm0ac")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02326, 0, -6.73313)
 
-[node name="Tree2" parent="Trees" instance=ExtResource("2_m3ei8")]
-transform = Transform3D(0.533024, 0, -0.8461, 0, 1.19124, 0, 0.8461, 0, 0.533024, 6.13745, 0, -6.07546)
+[node name="Tree2" parent="Trees" instance=ExtResource("3_bm0ac")]
+transform = Transform3D(0.657046, 0, -0.75385, 0, 0.895236, 0, 0.75385, 0, 0.657046, 7.20455, 0, -5.48007)
 
-[node name="Tree3" parent="Trees" instance=ExtResource("2_m3ei8")]
-transform = Transform3D(-0.868753, 0, -0.495246, 0, 1.07472, 0, 0.495246, 0, -0.868753, 7.25191, 0, 3.76379)
+[node name="Tree3" parent="Trees" instance=ExtResource("3_bm0ac")]
+transform = Transform3D(0.657046, 0, -0.75385, 0, 1.0504, 0, 0.75385, 0, 0.657046, 5.72782, 0, 1.46553)
+
+[connection signal="health_updated" from="Player" to="UI/HealthBar" method="_on_player_health_updated"]

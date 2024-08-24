@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://coc6e0ohhhk4u"]
+
+[ext_resource type="PackedScene" uid="uid://bvgyhv7b0727s" path="res://scenes/player/health/health_bar.tscn" id="1_jip43"]
+[ext_resource type="PackedScene" uid="uid://c236l765vyobh" path="res://scenes/arrow/counter/arrow_counter.tscn" id="2_i7h7r"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HealthBar" parent="." instance=ExtResource("1_jip43")]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 810.0
+offset_bottom = 70.0
+
+[node name="ArrowCounter" parent="." instance=ExtResource("2_i7h7r")]
+layout_mode = 1
