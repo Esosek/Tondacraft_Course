@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b4oyjs4pdd7ey"
-path="res://.godot/imported/Tree.fbx-53a31f9cea8b66a715d6678a3600c902.scn"
+uid="uid://bbaj8d3w63pjd"
+path="res://.godot/imported/Tree.glb-e9de56bf71533d71d1eea4c9818e97e2.scn"
 
 [deps]
 
-source_file="res://assets/Tree.fbx"
-dest_files=["res://.godot/imported/Tree.fbx-53a31f9cea8b66a715d6678a3600c902.scn"]
+source_file="res://assets/Tree.glb"
+dest_files=["res://.godot/imported/Tree.glb-e9de56bf71533d71d1eea4c9818e97e2.scn"]
 
 [params]
 
@@ -27,18 +27,21 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=true
+animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "materials": {
+"BaseMaterial": {
+"use_external/enabled": true,
+"use_external/path": "res://assets/base_material.tres"
+},
 "TreeMat": {
 "use_external/enabled": true,
 "use_external/path": "res://scenes/tree/tree_material.tres"
 }
 }
 }
-fbx/importer=0
-fbx/allow_geometry_helper_nodes=false
-fbx/embedded_image_handling=1
+gltf/naming_version=1
+gltf/embedded_image_handling=1
