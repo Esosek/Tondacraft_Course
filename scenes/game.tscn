@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cylbs1f7p2ut1"]
+[gd_scene load_steps=8 format=3 uid="uid://cylbs1f7p2ut1"]
 
 [ext_resource type="PackedScene" uid="uid://duc1fbwkdku8e" path="res://scenes/player/player.tscn" id="1_0mkui"]
 [ext_resource type="PackedScene" uid="uid://coc6e0ohhhk4u" path="res://scenes/ui.tscn" id="1_04odf"]
 [ext_resource type="PackedScene" uid="uid://tr3ghg0jhlfp" path="res://scenes/tree/tree.tscn" id="3_bm0ac"]
+[ext_resource type="PackedScene" uid="uid://jqh0wjhmllrn" path="res://scenes/enemy/creeper.tscn" id="4_on8qj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_65kno"]
 albedo_color = Color(0.203141, 0.590745, 0.362937, 1)
@@ -42,5 +43,7 @@ transform = Transform3D(0.657046, 0, -0.75385, 0, 0.895236, 0, 0.75385, 0, 0.657
 
 [node name="Tree3" parent="Trees" instance=ExtResource("3_bm0ac")]
 transform = Transform3D(0.657046, 0, -0.75385, 0, 1.0504, 0, 0.75385, 0, 0.657046, 5.72782, 0, 1.46553)
+
+[node name="Creeper" parent="." instance=ExtResource("4_on8qj")]
 
 [connection signal="health_updated" from="Player" to="UI/HealthBar" method="_on_player_health_updated"]

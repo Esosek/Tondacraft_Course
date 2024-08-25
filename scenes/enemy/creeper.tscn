@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://jqh0wjhmllrn"]
+
+[ext_resource type="Script" path="res://scenes/enemy/creeper.gd" id="1_uwl07"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_m1wxs"]
+
+[node name="Creeper" type="CharacterBody3D"]
+script = ExtResource("1_uwl07")
+health = 3
+damage = 1
+speed = 3.9
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_m1wxs")
