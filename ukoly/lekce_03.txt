@@ -1,0 +1,15 @@
+Úkol 1 - EnderDragon
+1. Vytvoř nový skript v adresáři /scenes/enemy s názvem ender_dragon.gd a názvem třídy EnderDragon
+2. Skript bude dědit třídu Enemy
+3. Připrav funkce _ready, _process a _physics_process, které zatím nechej prázdné
+4. Přidej prázdnou funkci fly (létání)
+5. Vytvoř novou scénu a node typu CharacterBody3D
+6. Vlož do něj model EnderDragon.glb, který najdeš ve složce /assets
+7. Přidej node CollisionShape3D, zatím jako obyčejný obdélník
+8. Přidej scénu EnderDragona do scény game.tscn
+
+Bonusový úkol 2
+1. Přidej do base class Enemy metodu attack(), 
+která zatím jen do konzole vypíše "xxx attacks", kde xxx je jméno nepřítele
+2. Zavolej funkci attack() při spuštění hry v obou nepřátelských skriptech
+3. Měl by jsi v konzoli vidět "Creeper attacks" a "EnderDragon attacks"

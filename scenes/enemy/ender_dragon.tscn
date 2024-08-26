@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgdj0lm7afhwv"]
+
+[ext_resource type="Script" path="res://scenes/enemy/ender_dragon.gd" id="1_srib5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hb2bo"]
+
+[node name="EnderDragon" type="CharacterBody3D"]
+script = ExtResource("1_srib5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_hb2bo")
