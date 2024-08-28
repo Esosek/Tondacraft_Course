@@ -3634,10 +3634,12 @@ _subresources={
 },
 "nodes": {
 "PATH:Creeper_Armature/Skeleton3D": {
-"rest_pose/external_animation_library": null
+"rest_pose/external_animation_library": null,
+"rest_pose/selected_animation": "Creeper_Default"
 },
 "PATH:Creeper_Armature/Skeleton3D/Creeper_Model": {
-"physics/shape_type": 1
+"physics/body_type": 1,
+"physics/shape_type": 0
 }
 }
 }

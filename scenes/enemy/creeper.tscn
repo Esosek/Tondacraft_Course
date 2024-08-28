@@ -3,9 +3,8 @@
 [ext_resource type="Script" path="res://scenes/enemy/creeper.gd" id="1_uwl07"]
 [ext_resource type="PackedScene" uid="uid://d24ld3ko446rc" path="res://assets/Creeper.glb" id="2_8t8yh"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_m1wxs"]
-radius = 0.288927
-height = 1.57132
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_rthkx"]
+points = PackedVector3Array(-0.275597, 0.964444, -0.275597, -0.275597, 0.964444, 0.275597, -0.275597, 1.51578, -0.275597, 0.275543, 0.964444, -0.275597, -0.272306, 0.00208467, -0.269554, 0.275597, 0.964444, 0.275543, -0.275597, 1.51578, 0.275597, -0.272306, 0.00208467, 0.2695, 0.272252, 0.00208467, 0.2695, 0.275543, 1.51578, -0.275597, 0.272252, 0.00208467, -0.269554, 0.275597, 1.51578, 0.275543)
 
 [node name="Creeper" type="CharacterBody3D"]
 script = ExtResource("1_uwl07")
@@ -13,10 +12,9 @@ health = 3
 damage = 1
 speed = 3.9
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.780351, 0)
-shape = SubResource("CapsuleShape3D_m1wxs")
-
 [node name="Creeper" parent="." instance=ExtResource("2_8t8yh")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_rthkx")
 
 [editable path="Creeper"]
