@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bgdj0lm7afhwv"]
 
-[ext_resource type="Script" path="res://scenes/enemy/ender_dragon.gd" id="1_srib5"]
+[ext_resource type="Script" path="res://scenes/enemy/ender_dragon/ender_dragon.gd" id="1_srib5"]
 [ext_resource type="PackedScene" uid="uid://wqioxj7e64o8" path="res://assets/EnderDragon.glb" id="2_bkj2f"]
 
 [node name="EnderDragon" type="CharacterBody3D"]
@@ -12,16 +12,15 @@ script = ExtResource("1_srib5")
 bones/0/position = Vector3(8.7611e-16, 8.27816, -3.22084)
 bones/0/rotation = Quaternion(0.373729, -4.01741e-07, -1.61872e-07, 0.927538)
 bones/1/rotation = Quaternion(0.169826, 0.032663, 0.0234238, 0.984654)
-bones/2/rotation = Quaternion(0.321482, -0.0343888, -0.00504789, 0.946278)
-bones/3/rotation = Quaternion(0.238629, -0.00057676, -0.00073138, 0.97111)
-bones/4/rotation = Quaternion(-0.128937, -7.50985e-08, 2.66963e-07, 0.991653)
-bones/5/rotation = Quaternion(0.149738, 1.60956e-07, -2.73845e-07, 0.988726)
-bones/5/scale = Vector3(1, 1, 1)
-bones/6/rotation = Quaternion(-0.700886, 0.0935805, 0.700888, -0.0935805)
+bones/2/rotation = Quaternion(0.35164, -0.0345277, -0.00359047, 0.935492)
+bones/3/rotation = Quaternion(0.319932, -1.5397e-07, -5.85975e-07, 0.947441)
+bones/4/rotation = Quaternion(-0.128937, -7.51343e-08, 2.67027e-07, 0.991653)
+bones/5/rotation = Quaternion(0.149738, 1.60913e-07, -2.73852e-07, 0.988726)
+bones/6/rotation = Quaternion(-0.634298, 0.132849, 0.708445, -0.279504)
 bones/6/scale = Vector3(1, 1, 1)
-bones/7/rotation = Quaternion(2.64974e-07, 1.57203e-08, 0.16464, 0.986354)
+bones/7/rotation = Quaternion(-0.0781456, -0.00588492, 0.0945412, 0.992432)
 bones/7/scale = Vector3(1, 1, 1)
-bones/8/rotation = Quaternion(3.85044e-07, 7.41471e-11, 0.241656, 0.970362)
+bones/8/rotation = Quaternion(-0.286395, -0.45392, 0.23326, 0.810879)
 bones/9/rotation = Quaternion(0.885415, 2.91104e-08, -6.97005e-07, 0.464801)
 bones/10/rotation = Quaternion(0.186083, -1.25709e-09, -1.39734e-07, 0.982534)
 bones/10/scale = Vector3(1, 1, 1)
@@ -40,5 +39,8 @@ bones/21/rotation = Quaternion(0.00123364, -0.00123472, -0.707106, 0.707106)
 bones/22/rotation = Quaternion(0.344179, -1.02749e-07, -2.35312e-07, 0.938904)
 bones/23/rotation = Quaternion(0.00123425, 0.00123533, 0.707106, 0.707106)
 bones/24/rotation = Quaternion(0.330667, 1.12455e-07, 2.3802e-07, 0.943748)
+
+[node name="CollisionShape3D2" parent="EnderDragon/EnderDragon_armature/Skeleton3D/EnderDragon_model/StaticBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.767132, 0.64149, 0, -0.64149, 0.767132, 0, 0, 0)
 
 [editable path="EnderDragon"]
