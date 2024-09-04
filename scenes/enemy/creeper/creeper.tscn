@@ -8,6 +8,7 @@ points = PackedVector3Array(-0.275597, 0.964444, -0.275597, -0.275597, 0.964444,
 
 [node name="Creeper" type="CharacterBody3D"]
 script = ExtResource("1_uwl07")
+stop_distance = 1.0
 health = 3
 damage = 1
 speed = 3.75

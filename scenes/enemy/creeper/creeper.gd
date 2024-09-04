@@ -6,13 +6,12 @@ extends Enemy
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	super()
-	print(health)
-	attack()
 
 
 # Godot volá každý frame. Používá se pro všechno kromě fyzikálního pohybu
 # parametr delta je čas mezi framy a slouží pro konzistentní update.
-func _process(_delta):
+func _process(delta):
+	super(delta)
 	if velocity != Vector3.ZERO:
 		# Play walk animation
 		pass
@@ -30,3 +29,5 @@ func _physics_process(delta):
 	if position.distance_to(player_position) > stop_distance:
 		move_and_collide(target_position * speed * delta)
 		look_at(Vector3(player_position.x, 0, player_position.z))
+	else:
+		super.attack()
