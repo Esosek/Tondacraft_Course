@@ -3,10 +3,11 @@
 2. Skript bude dědit třídu Enemy
 3. Připrav funkce _ready, _process a _physics_process, které zatím nechej prázdné
 4. Přidej prázdnou funkci fly (létání)
-5. Vytvoř novou scénu a node typu CharacterBody3D
-6. Vlož do něj model EnderDragon.glb, který najdeš ve složce /assets
-7. Přidej node CollisionShape3D, zatím jako obyčejný obdélník
-8. Přidej scénu EnderDragona do scény game.tscn
+5. Stáhni si EnderDragon.glb model a ulož do složky /assets
+6. Vytvoř novou scénu a node typu CharacterBody3D
+7. Vlož do ní model EnderDragon.glb
+8. Vygeneruj node CollisionShape3D a přesuň pod root node
+9. Přidej scénu EnderDragona do scény game.tscn někam do vzduchu
 
 Bonusový úkol 2
 1. Přidej do base class Enemy metodu attack(), 
