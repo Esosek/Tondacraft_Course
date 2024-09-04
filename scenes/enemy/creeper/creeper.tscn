@@ -10,9 +10,12 @@ points = PackedVector3Array(-0.275597, 0.964444, -0.275597, -0.275597, 0.964444,
 script = ExtResource("1_uwl07")
 health = 3
 damage = 1
-speed = 3.9
+speed = 3.75
 
 [node name="Creeper" parent="." instance=ExtResource("2_8t8yh")]
+
+[node name="Creeper_Armature" parent="Creeper" index="0"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("ConvexPolygonShape3D_rthkx")

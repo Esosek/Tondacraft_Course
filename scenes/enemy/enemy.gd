@@ -1,5 +1,5 @@
 class_name Enemy
-extends Node
+extends CharacterBody3D
 
 @export var health: int
 @export var damage: int
