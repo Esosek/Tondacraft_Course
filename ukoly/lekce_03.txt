@@ -3,7 +3,8 @@
 2. Skript bude dědit třídu Enemy
 3. Připrav funkce _ready, _process a _physics_process, které zatím nechej prázdné
 4. Přidej prázdnou funkci fly (létání)
-5. Stáhni si EnderDragon.glb model a ulož do složky /assets
+5. Stáhni si soubory EnderDragon.glb a EnderDragon_EnderDragon_text.png z https://github.com/Esosek/Tondacraft_Course/tree/04-enemy-class/assets
+a ulož je do složky /assets
 6. Vytvoř novou scénu a node typu CharacterBody3D
 7. Vlož do ní model EnderDragon.glb
 8. Vygeneruj node CollisionShape3D a přesuň pod root node
