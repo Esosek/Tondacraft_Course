@@ -4,7 +4,7 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_guy27"]
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" groups=["PlayerGroup"]]
 floor_block_on_wall = false
 script = ExtResource("1_65387")
 jump_velocity = 4.25

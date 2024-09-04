@@ -3,6 +3,7 @@ extends Enemy
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	super()
 	attack()
 
 # Godot volá každý frame. Používá se pro všechno kromě fyzikálního pohybu
