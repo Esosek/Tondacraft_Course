@@ -11,12 +11,18 @@ script = ExtResource("1_uwl07")
 stop_distance = 1.0
 health = 3
 damage = 1
-speed = 3.75
+speed = 150.0
 
 [node name="Creeper" parent="." instance=ExtResource("2_8t8yh")]
 
 [node name="Creeper_Armature" parent="Creeper" index="0"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="Skeleton3D" parent="Creeper/Creeper_Armature" index="0"]
+bones/2/rotation = Quaternion(0.707107, 0, -0.707107, 0)
+bones/3/rotation = Quaternion(0.707107, 0, -0.707107, 0)
+bones/4/rotation = Quaternion(0.707107, 0, 0.707107, 0)
+bones/5/rotation = Quaternion(0.707107, 0, 0.707107, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("ConvexPolygonShape3D_rthkx")

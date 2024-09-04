@@ -1,11 +1,14 @@
 class_name Creeper
 extends Enemy
 
+@onready var animation_player = $Creeper/AnimationPlayer
+
 @export var stop_distance = 0.5
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	super()
+	#animation_player.play("Creeper_Walk_20")
 
 
 # Godot volá každý frame. Používá se pro všechno kromě fyzikálního pohybu
@@ -14,6 +17,7 @@ func _process(delta):
 	super(delta)
 	if velocity != Vector3.ZERO:
 		# Play walk animation
+		animation_player.play("Creeper_Walk_20")
 		pass
 	else:
 		# Play idle animation
@@ -27,7 +31,9 @@ func _physics_process(delta):
 	target_position = Vector3(target_position.x, 0, target_position.z)
 	
 	if position.distance_to(player_position) > stop_distance:
-		move_and_collide(target_position * speed * delta)
+		velocity = target_position * speed * delta
+		move_and_slide()
 		look_at(Vector3(player_position.x, 0, player_position.z))
 	else:
+		velocity = Vector3.ZERO
 		super.attack()
