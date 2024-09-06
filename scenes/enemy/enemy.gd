@@ -5,6 +5,7 @@ extends CharacterBody3D
 @export var damage: int
 @export var speed: float
 @export var time_between_attack := 2.0 # jak často enemy útočí
+@export var animation_player: AnimationPlayer
 
 var next_attack := 0.0 # slouží pro měření času do dalšího útoku
 
@@ -12,11 +13,16 @@ var player: Player
 
 func _ready():
 	player = get_tree().get_first_node_in_group("PlayerGroup")
+	if animation_player == null:
+		printerr(name, ": Missing AnimationPlayer ref")
 
-func attack():
+func attack(animation_name = ""):
 	if next_attack <= 0:
 		print(name + " attacks")
 		next_attack = time_between_attack
+		
+		if animation_player and animation_name != "":
+			animation_player.play(animation_name)
 
 func _process(delta):
 	if next_attack > 0:

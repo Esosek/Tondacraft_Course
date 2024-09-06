@@ -6,12 +6,13 @@
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_rthkx"]
 points = PackedVector3Array(-0.275597, 0.964444, -0.275597, -0.275597, 0.964444, 0.275597, -0.275597, 1.51578, -0.275597, 0.275543, 0.964444, -0.275597, -0.272306, 0.00208467, -0.269554, 0.275597, 0.964444, 0.275543, -0.275597, 1.51578, 0.275597, -0.272306, 0.00208467, 0.2695, 0.272252, 0.00208467, 0.2695, 0.275543, 1.51578, -0.275597, 0.272252, 0.00208467, -0.269554, 0.275597, 1.51578, 0.275543)
 
-[node name="Creeper" type="CharacterBody3D"]
+[node name="Creeper" type="CharacterBody3D" node_paths=PackedStringArray("animation_player")]
 script = ExtResource("1_uwl07")
 stop_distance = 1.0
 health = 3
 damage = 1
 speed = 150.0
+animation_player = NodePath("Creeper/AnimationPlayer")
 
 [node name="Creeper" parent="." instance=ExtResource("2_8t8yh")]
 
