@@ -7,7 +7,11 @@ signal health_updated
 @export var jump_velocity = 4.5
 @export var mouse_sensitivity = 0.002
 @export var camera_clamp = 1.2
-@export var health = 1
+@export var health = 1:
+	set(value):
+		health = value
+		health_updated.emit(health)
+		
 @export var max_health = 5
 
 @onready var camera = $Camera3D
@@ -55,7 +59,6 @@ func _unhandled_input(event):
 		
 func set_initial_health():
 	health = max_health
-	health_updated.emit(health)
 	
 func take_damage(value: int):
 	print("Player takes ", value, " damage")
