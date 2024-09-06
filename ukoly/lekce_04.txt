@@ -5,10 +5,14 @@
 4. V metodě take_damage dále od proměnné health odečti hodnotu value
 5. Pokud bude po odečtení proměnná health menší nebo rovna 0, zavolej metodu die
 
-Bonusový úkol 2 - Enemy
+Bonusový úkol 1 - Enemy
 1. Ve skriptu enemy.gd pokud nepřítel může útočit zavolej v metodě attack metodu take_damage na objektu player a jako parametr pošli damage
 2. Pusť hru a zkontroluj, že se vypíšou následující logy
 
-Creeper attacks
-Player takes 1 damage
-Player died
+"Creeper attacks"
+"Player takes 1 damage"
+"Player died"
+
+Bonusový úkol 2 - Enemy
+1. Přidej metody take_damage a die do skriptu enemy.gd
+2. Místo "Player" budou do logů vypisovat jméno konkrétního nepřítele (Creeper / EnderDragon)
