@@ -56,3 +56,13 @@ func _unhandled_input(event):
 func set_initial_health():
 	health = max_health
 	health_updated.emit(health)
+	
+func take_damage(value: int):
+	print("Player takes ", value, " damage")
+	health -= value
+	if health <= 0:
+		health = 0
+		die()
+	
+func die():
+	print("Player died")

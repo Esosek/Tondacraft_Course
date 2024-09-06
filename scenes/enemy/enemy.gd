@@ -17,8 +17,9 @@ func _ready():
 		printerr(name, ": Missing AnimationPlayer ref")
 
 func attack(animation_name = ""):
-	if next_attack <= 0:
+	if next_attack <= 0: # Kontrola jestli může znovu útočit
 		print(name + " attacks")
+		player.take_damage(damage)
 		next_attack = time_between_attack
 		
 		if animation_player and animation_name != "":
