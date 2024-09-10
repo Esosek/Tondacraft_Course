@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://coc6e0ohhhk4u"]
+[gd_scene load_steps=6 format=3 uid="uid://coc6e0ohhhk4u"]
 
 [ext_resource type="PackedScene" uid="uid://bvgyhv7b0727s" path="res://scenes/player/health/health_bar.tscn" id="1_jip43"]
 [ext_resource type="PackedScene" uid="uid://c236l765vyobh" path="res://scenes/arrow/counter/arrow_counter.tscn" id="2_i7h7r"]
+[ext_resource type="FontFile" uid="uid://circ503ry3kbx" path="res://assets/Minecraftia-Regular.ttf" id="3_736di"]
+[ext_resource type="Texture2D" uid="uid://dvsqjn1o8sbl5" path="res://assets/icon.svg" id="4_we0il"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4da8c"]
+bg_color = Color(0.584314, 0.780392, 0.858824, 0.196078)
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -21,3 +26,59 @@ offset_bottom = 70.0
 
 [node name="ArrowCounter" parent="." instance=ExtResource("2_i7h7r")]
 layout_mode = 1
+
+[node name="GameOver" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 202.0
+offset_top = 116.0
+offset_right = -202.0
+offset_bottom = -116.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4da8c")
+
+[node name="Title" type="Label" parent="GameOver"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 154.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_736di")
+theme_override_font_sizes/font_size = 35
+text = "You Died!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameOver"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -154.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="PanelContainer" type="HBoxContainer" parent="GameOver/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="LeftArrow" type="TextureRect" parent="GameOver/VBoxContainer/PanelContainer"]
+layout_mode = 2
+texture = ExtResource("4_we0il")
+
+[node name="Label" type="Label" parent="GameOver/VBoxContainer/PanelContainer"]
+layout_mode = 2
+text = "Retry"
+
+[node name="RightArrow" type="TextureRect" parent="GameOver/VBoxContainer/PanelContainer"]
+layout_mode = 2
+texture = ExtResource("4_we0il")
