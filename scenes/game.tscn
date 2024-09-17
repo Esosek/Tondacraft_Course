@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://cn6qovrdo1575"]
+
+[ext_resource type="PackedScene" uid="uid://b32wl47h2rtjs" path="res://scenes/player/player.tscn" id="1_vgmdg"]
+[ext_resource type="PackedScene" uid="uid://b7kdr5unc26xr" path="res://scenes/tree.tscn" id="2_fe5kp"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_lmeom"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ghbkw"]
+albedo_color = Color(0.401934, 0.270295, 0.118309, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xtr1w"]
+
+[node name="Game" type="Node"]
+
+[node name="Ground" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+shape = SubResource("WorldBoundaryShape3D_lmeom")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_ghbkw")
+mesh = SubResource("PlaneMesh_xtr1w")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.965926, 0.148453, -0.212012, 0, 0.819152, 0.573576, 0.258819, -0.554032, 0.79124, 0, 20, 0)
+light_energy = 0.5
+shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("1_vgmdg")]
+
+[node name="Trees" type="Node3D" parent="."]
+
+[node name="Tree" parent="Trees" instance=ExtResource("2_fe5kp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -11)
+
+[node name="Tree2" parent="Trees" instance=ExtResource("2_fe5kp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
+
+[node name="Tree3" parent="Trees" instance=ExtResource("2_fe5kp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)

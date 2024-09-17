@@ -2,21 +2,30 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:addons/kenney_prototype_tools/textures/red/texture_01.png.import
 uid="uid://ntiu66svity3"
 path.s3tc="res://.godot/imported/texture_01.png-031f16b1234aadc0b23c0e7873db99a9.s3tc.ctex"
+=======
+uid="uid://d4l8skhr5rgyh"
+path="res://.godot/imported/EsoPallete.png-cfc153ab29fb5d50db4939c578ae4367.ctex"
+>>>>>>> Stashed changes:assets/EsoPallete.png.import
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
+<<<<<<< Updated upstream:addons/kenney_prototype_tools/textures/red/texture_01.png.import
 source_file="res://addons/kenney_prototype_tools/textures/red/texture_01.png"
 dest_files=["res://.godot/imported/texture_01.png-031f16b1234aadc0b23c0e7873db99a9.s3tc.ctex"]
+=======
+source_file="res://assets/EsoPallete.png"
+dest_files=["res://.godot/imported/EsoPallete.png-cfc153ab29fb5d50db4939c578ae4367.ctex"]
+>>>>>>> Stashed changes:assets/EsoPallete.png.import
 
 [params]
 
-compress/mode=2
+compress/mode=3
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
