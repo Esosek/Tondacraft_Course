@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cn6qovrdo1575"]
+[gd_scene load_steps=9 format=3 uid="uid://cn6qovrdo1575"]
 
 [ext_resource type="PackedScene" uid="uid://b32wl47h2rtjs" path="res://scenes/player/player.tscn" id="1_vgmdg"]
 [ext_resource type="PackedScene" uid="uid://b7kdr5unc26xr" path="res://scenes/tree.tscn" id="2_fe5kp"]
@@ -9,6 +9,16 @@
 albedo_color = Color(0.401934, 0.270295, 0.118309, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_xtr1w"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_togyk"]
+
+[sub_resource type="Sky" id="Sky_5hvbs"]
+sky_material = SubResource("ProceduralSkyMaterial_togyk")
+
+[sub_resource type="Environment" id="Environment_q4wxb"]
+background_mode = 1
+background_color = Color(0.593838, 0.705651, 0.742639, 1)
+sky = SubResource("Sky_5hvbs")
 
 [node name="Game" type="Node"]
 
@@ -28,6 +38,7 @@ light_energy = 0.5
 shadow_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("1_vgmdg")]
+speed = 4
 
 [node name="Trees" type="Node3D" parent="."]
 
@@ -39,3 +50,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
 
 [node name="Tree3" parent="Trees" instance=ExtResource("2_fe5kp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_q4wxb")
