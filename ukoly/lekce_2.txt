@@ -1,0 +1,14 @@
+Úkol 1
+1. Do skriptu player.gd přidej proměnnou health (životy), která se bude zobrazovat v editoru.
+2. Nastav její výchozí hodnotu na 1
+3. Pomocí metody print() a ready() vypiš hodnotu health do konzole při spuštění hry
+4. Do stejného skriptu přidej proměnnou max_health (maximální počet životů), která se bude zobrazovat v editoru
+5. Nastav její hodnotu na 5
+6. Při spuštění hry nastav hodnotu proměnné health aby se rovnala proměnné max_health. Pomůže ti opět built-in funkce ready()
+7. Vypiš do konzole hodnotu health, která by se nyní měla rovnat 5
+
+Úkol 2
+1. Do skriptu player.gd přidej funkci take_damage (dostaň damage),
+která vyžaduje jeden argument s názvem value a typem Int
+2. Zatím funkce po zavolání vypíše do konzole větu "Player takes %VALUE% damage"
+3. Zkus jí zavolat po spuštění hry s hodnotou 3 a měl bys v konzoli vidět  "Player takes 3 damage"
