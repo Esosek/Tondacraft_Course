@@ -1,7 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://cn6qovrdo1575"]
+[gd_scene load_steps=9 format=3 uid="uid://cn6qovrdo1575"]
 
 [ext_resource type="PackedScene" uid="uid://b32wl47h2rtjs" path="res://scenes/player/player.tscn" id="1_vgmdg"]
 [ext_resource type="PackedScene" uid="uid://b7kdr5unc26xr" path="res://scenes/tree.tscn" id="2_fe5kp"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ho033"]
+
+[sub_resource type="Sky" id="Sky_vs8ib"]
+sky_material = SubResource("ProceduralSkyMaterial_ho033")
+
+[sub_resource type="Environment" id="Environment_xyl0w"]
+background_mode = 2
+sky = SubResource("Sky_vs8ib")
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_lmeom"]
 
@@ -11,6 +20,9 @@ albedo_color = Color(0.401934, 0.270295, 0.118309, 1)
 [sub_resource type="PlaneMesh" id="PlaneMesh_xtr1w"]
 
 [node name="Game" type="Node"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_xyl0w")
 
 [node name="Ground" type="StaticBody3D" parent="."]
 
