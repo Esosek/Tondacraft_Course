@@ -29,7 +29,6 @@ func _ready():
 	print(health)
 	health = max_health
 	print(health)
-	take_damage(3)
 
 # Volá se každý frame a používá se pro fyzíkální pohyb
 func _physics_process(delta: float):
