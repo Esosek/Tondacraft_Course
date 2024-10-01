@@ -9,6 +9,6 @@
 
 Úkol 2
 1. Do skriptu player.gd přidej funkci take_damage (dostaň damage),
-která vyžaduje jeden argument s názvem value a typem int
+která vyžaduje jeden argumentss s názvem value a typem int
 2. Zatím funkce po zavolání vypíše do konzole větu "Player takes %VALUE% damage"
 3. Zkus jí zavolat po spuštění hry s hodnotou 3 a měl bys v konzoli vidět  "Player takes 3 damage"

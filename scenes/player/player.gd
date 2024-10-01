@@ -12,10 +12,11 @@ extends CharacterBody3D
 @export var speed = 5
 @export var jump_velocity = 4.5
 @export var mouse_sensitivity = 0.002
+@onready var camera: Camera3D = $Camera3D
 
 # Když zapnu hru, Godot zavolá tuhle funkci
 func _init():
-	print("Hra spuštěna!")
+	print("PLAYER: Hra spuštěna!")
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
@@ -49,3 +50,5 @@ func _physics_process(delta: float):
 func _unhandled_input(event: InputEvent):
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * mouse_sensitivity)
+		camera.rotate_x(-event.relative.y * mouse_sensitivity)
+		

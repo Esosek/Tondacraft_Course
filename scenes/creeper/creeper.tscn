@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpo2o7ofb5gca"]
+
+[ext_resource type="Script" path="res://scenes/creeper/creeper.gd" id="1_55i5f"]
+[ext_resource type="PackedScene" uid="uid://byfsx11ojwclx" path="res://assets/Creeper.glb" id="1_e0n1w"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x0b1q"]
+size = Vector3(0.503906, 1.48807, 0.535156)
+
+[node name="Creeper" type="CharacterBody3D"]
+script = ExtResource("1_55i5f")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.755753, 0)
+shape = SubResource("BoxShape3D_x0b1q")
+
+[node name="Creeper" parent="." instance=ExtResource("1_e0n1w")]
+
+[node name="Skeleton3D" parent="Creeper/Creeper_Armature" index="0"]
+bones/2/rotation = Quaternion(0.707107, 0, -0.707107, 0)
+bones/3/rotation = Quaternion(0.707107, 0, -0.707107, 0)
+bones/4/rotation = Quaternion(0.707107, 0, 0.707107, 0)
+bones/5/rotation = Quaternion(0.707107, 0, 0.707107, 0)
+
+[editable path="Creeper"]
