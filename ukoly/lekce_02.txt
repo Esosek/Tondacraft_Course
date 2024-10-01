@@ -4,7 +4,7 @@
 3. Pomocí metody print() a _ready() vypiš hodnotu health do konzole při spuštění hry
 4. Do stejného skriptu přidej proměnnou max_health (maximální počet životů), která se bude zobrazovat v editoru
 5. Nastav její hodnotu na 5
-6. Při spuštění hry nastav hodnotu proměnné health aby se rovnala proměnné max_health. Pomůže ti opět built-in funkce ready()
+6. Při spuštění hry nastav hodnotu proměnné health aby se rovnala proměnné max_health. Pomůže ti opět built-in funkce _ready()
 7. Vypiš do konzole hodnotu health, která by se nyní měla rovnat 5
 
 Úkol 2

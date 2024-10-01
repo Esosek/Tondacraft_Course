@@ -12,6 +12,11 @@ extends CharacterBody3D
 @export var speed = 5
 @export var jump_velocity = 4.5
 @export var mouse_sensitivity = 0.002
+@export var health = 1
+@export var max_health = 5
+@export var camera_clamp = 1.2
+
+@onready var camera: Camera3D = $Camera3D
 
 # Když zapnu hru, Godot zavolá tuhle funkci
 func _init():
@@ -21,7 +26,10 @@ func _init():
 
 # Když je hráč poprvé ve hře
 func _ready():
-	pass
+	print(health)
+	health = max_health
+	print(health)
+	take_damage(3)
 
 
 func _physics_process(delta: float):
@@ -46,6 +54,14 @@ func _physics_process(delta: float):
 
 	move_and_slide()
 
+
 func _unhandled_input(event: InputEvent):
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * mouse_sensitivity)
+		camera.rotate_x(-event.relative.y * mouse_sensitivity)
+		camera.rotation.x = clamp(camera.rotation.x, -camera_clamp, camera_clamp)
+		
+
+
+func take_damage(value: int):
+	print("Player takes ", value, " damage")
