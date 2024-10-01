@@ -31,7 +31,7 @@ func _ready():
 	print(health)
 	take_damage(3)
 
-
+# Volá se každý frame a používá se pro fyzíkální pohyb
 func _physics_process(delta: float):
 	# Add the gravity.
 	if not is_on_floor():

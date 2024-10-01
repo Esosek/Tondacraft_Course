@@ -60,6 +60,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
 [node name="Creeper" parent="Enemies" node_paths=PackedStringArray("player") instance=ExtResource("2_rnusy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.52624, 0, -6.0863)
 script = ExtResource("3_mne4o")
+speed = 13
 player = NodePath("../../Player")
 
 [node name="Player" parent="." instance=ExtResource("1_vgmdg")]
