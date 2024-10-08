@@ -1,0 +1,8 @@
+Úkol 1
+1. Ve skriptu creeper.gd přidej exportovanou proměnnou damage s hodnotou 1
+2. Vytvoř funkci attack(), která vypíše do konzole "Damaging player for %%DAMAGE%% damage"
+3. V této funkci pust animaci s názvem "Creeper_Attack_11"
+
+Úkol 2
+1. Tam, kde měříme vzdálenost mezi creeperem a hráčem pomocí hodnoty 1.2. 
+Zkus tuto hardcoded hodnotu nahradit exportovanou proměnnou stop_distance

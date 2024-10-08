@@ -8,12 +8,14 @@ size = Vector3(0.503906, 1.48807, 0.535156)
 
 [node name="Creeper" type="CharacterBody3D"]
 script = ExtResource("1_55i5f")
+speed = 12
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.755753, 0)
 shape = SubResource("BoxShape3D_x0b1q")
 
 [node name="Creeper" parent="." instance=ExtResource("1_e0n1w")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="Skeleton3D" parent="Creeper/Creeper_Armature" index="0"]
 bones/2/rotation = Quaternion(0.707107, 0, -0.707107, 0)

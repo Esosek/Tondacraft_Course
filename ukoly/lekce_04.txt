@@ -1,0 +1,11 @@
+Úkol 1
+1. Tam, kde měříme vzdálenost mezi creeperem a hráčem pomocí hodnoty 1.2. 
+Zkus tuto hardcoded hodnotu nahradit exportovanou proměnnou stop_distance
+
+Úkol 2
+1. Ve funkci attack(), pokud Crepeer opravdu útočí, přehraj animaci "Creeper_Attack_11"
+
+Úkol 3
+1. Creeper attack() volá funkci take_damage(), která je na skriptu player
+S hodnotou %damage%
+2. Potvrdit si, že vidím v konzoli 5x dostal 1 damage a pak umřel
